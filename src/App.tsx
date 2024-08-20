@@ -2,7 +2,7 @@
  * @Author: shufei.han
  * @Date: 2024-08-02 09:29:40
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-08 15:55:21
+ * @LastEditTime: 2024-08-20 17:46:45
  * @FilePath: \qiankun\child-react-app\src\App.tsx
  * @Description: 
  */
@@ -17,9 +17,10 @@ function App() {
   useEffect(() => {
     console.log('useEffect')
     if (window.__MICRO_APP_ENVIRONMENT__) {
-      console.log('我在微前端环境中', window)
+      console.log('我（React App）在微前端环境中', window)
+    }else {
+      console.log('child-react-app mounted')
     }
-    console.log('child-react-app mounted')
   }, [])
 
   return (
